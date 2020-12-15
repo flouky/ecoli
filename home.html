@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-ios.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <style>
+        .closemodal{
+            border-radius: 0px 30px 0px 0px;
+        }
+        .sandbox-image {
+            background-image: url("./footer.jpg");
+            background-color: #cccccc;
+            background-position: center;
+            background-repeat: no-repeat;   
+            background-size: 100% 100%;
+        }
+        #homevideo{
+            clip-path: circle(50% at 50% 50%);
+        }
+        section{
+            padding:80px;
+            padding:80px;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+        *{
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-decoration: none;
+        }
+        input:focus, textarea:focus, select:focus{
+            outline: none;
+        }
+        .myinput {
+            border: 2px solid rgb(196, 194, 194); 
+            padding-left: 15px;
+        }
+        input:focus, textarea:focus, select:focus,button:focus{
+            outline: none;
+        }
+        #help{
+           position: fixed; 
+           bottom: 0.5cm;
+           right: 0.5cm;
+        }
+    </style>
+
+    <!--Modals-->
+    <!--login choices Modal-->
+    <div id="login-modal" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-round-xxlarge w3-animate-zoom" style="max-width:600px">
+            <div class="w3-center w3-padding-32">
+                <span onclick="document.getElementById('login-modal').style.display='none'" class="closemodal w3-button w3-xlarge w3-hover-red w3-display-topright"  title="Close Modal">&times;</span>
+                <div class=" w3-container w3-bar  w3-padding-16 w3-margin-top">
+                    <div class=" w3-bar-item w3-padding w3-mobile w3-hover-sepia">
+                        <div class="w3-padding w3-border w3-round-xlarge  w3-card w3-light-gray">
+                            <img src="./teacher.png"  alt="Alps"/>
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Teacher</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-bar-item w3-padding  w3-mobile w3-hover-sepia">
+                        <div class="w3-padding w3-border w3-round-xlarge w3-card w3-light-gray">
+                            <img src="./student.png"  alt="Alps"/>
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Student</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-bar-item w3-padding  w3-mobile w3-hover-sepia">
+                        <div class="w3-padding w3-border w3-round-xlarge w3-card w3-light-gray">
+                            <img src="./parents.png"  alt="Alps">
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Parent</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-bar-item  w3-padding  w3-mobile w3-hover-sepia">
+                        <div class="w3-padding w3-border w3-round-xlarge w3-card w3-light-gray">
+                            <img src="./headmaster.png" alt="Alps"/>
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Manager</strong></span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Register choices Modal-->
+    <div id="signup-modal" class="w3-modal">
+        <div class="w3-modal-content w3-round-xxlarge w3-card-4 w3-animate-zoom" style="max-width:600px">
+            <div class="w3-center w3-padding-32"><br>
+                <span onclick="document.getElementById('signup-modal').style.display='none'" class="closemodal w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+                <div class=" w3-container w3-bar  w3-padding-16 w3-margin-top">
+                    <div class=" w3-bar-item w3-padding w3-mobile w3-hover-sepia" onclick="document.getElementById('signup').style.display='block'">
+                        <div class="w3-padding w3-border w3-round-xlarge  w3-card w3-light-gray">
+                            <img src="./teacher.png"  alt="Alps">
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Teacher</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-bar-item w3-padding w3-hover-sepia w3-mobile">
+                        <div class="w3-padding w3-border w3-round-xlarge w3-card w3-light-gray">
+                            <img src="./student.png"  alt="Alps">
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Student</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-bar-item w3-padding w3-hover-sepia w3-mobile">
+                        <div class="w3-padding w3-border w3-round-xlarge w3-card w3-light-gray">
+                            <img src="./parents.png"  alt="Alps">
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Parent</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-bar-item  w3-padding w3-hover-sepia w3-mobile">
+                        <div class="w3-padding w3-border w3-round-xlarge w3-card w3-light-gray">
+                            <img src="./headmaster.png" alt="Alps">
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Manager</strong></span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Register Modal-->
+    <div id="signup" class="w3-modal">
+        <div class="w3-modal-content w3-round-xxlarge w3-animate-top" style="max-width:600px">
+    
+          <div class="w3-center"><br>
+            <span onclick="document.getElementById('signup').style.display='none'" class="closemodal w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+            <img src="./teacher.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+          </div>
+          <form class="w3-container " action="/action_page.php">
+            <div class="w3-section">
+              <input class="myinput w3-input w3-margin-bottom w3-padding-16 w3-round-xxlarge" type="text" placeholder="First name" name="usrname">
+              <input class="myinput w3-input w3-margin-bottom w3-padding-16 w3-round-xxlarge" type="password" placeholder="Last name" name="psw" >
+              <input class="myinput w3-input w3-margin-bottom w3-padding-16 w3-round-xxlarge " type="password" placeholder="Email" name="psw" >
+              <input class="myinput w3-input w3-margin-bottom w3-padding-16 w3-round-xxlarge" type="password" placeholder="Password" name="psw">
+              <p class="w3-center">By signing up, you agree to ClassDojo's Terms of Service and Privacy Policy</p>
+              <button class="w3-hover-opacity w3-margin-bottom w3-hover-deep-purple w3-deep-purple w3-button w3-block w3-green w3-section w3-padding-16 w3-round-xxlarge" type="submit" disabled>Sign up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    <!--Header-->
+    <div class="w3-top w3-white">
+        
+        <div class="w3-panel w3-bar  w3-left-align w3-large">
+            <a class="w3-bar-item w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-padding-large w3-theme-d4" ><i class="fa fa-home w3-margin-right"></i>Logo</a>
+            <a href="#" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-large w3-hover-text-red " title="News" style="margin-left: 10%;">Learn more</a>
+            <a href="#" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-large w3-hover-text-red" title="Account Settings">Schools</a>
+            <a href="#" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-large w3-hover-text-red" title="Messages">Resources</i></a>
+            <a href="#" onclick="document.getElementById('login-modal').style.display='block'" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-large w3-hover-text-red" title="Messages">Login</i></a>
+            <a href="#" onclick="document.getElementById('signup-modal').style.display='block'" class="w3-bar-item w3-hide-small w3-hide-medium w3-padding-large w3-button w3-light-gray w3-round-xxlarge" title="Messages"><span class="w3-text-deep-purple">Sign up</span></i></a>
+
+            <div class="w3-bar-item w3-hide-small w3-hide-medium  w3-padding-large w3-right "> 
+                <a href="#" class=" w3-padding-large w3-hover-text-red" onclick="myFunction('l_profile')" title="Profile">
+                    <img src="./teacher.png" class="w3-circle w3-light-gray" style="height:25px;width:25px" alt="Avatar"/> Oscar
+                </a> 
+                <div id="l_profile"class="w3-margin-top w3-dropdown-content w3-light-gray w3-bar-block  w3-center w3-round-xlarge" >
+                    <a href="#" class="w3-bar-item  w3-hover-text-deep-purple">Profile</a>
+                    <a href="#" class="w3-bar-item  w3-hover-text-deep-purple">Favorit</a>
+                    <a href="#" class="w3-bar-item  w3-hover-text-deep-purple">Settings</a>
+                </div>
+            </div> 
+        </div>
+        
+    </div>
+       
+       <!-- Navbar on small screens -->
+       <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-center w3-large " style="margin-top:80px">
+            <a href="#" class="w3-bar-item w3-hover-text-red w3-padding-large ">Learn more</a>
+            <a href="#" class="w3-bar-item w3-hover-text-red w3-padding-large ">Schools</a>
+            <a href="#" class="w3-bar-item w3-hover-text-red w3-padding-large ">Resources</a>
+            <a onclick="myFunction('s_profile')" class="w3-hover-text-red w3-block w3-bar-item w3-padding-large">
+                <img src="./teacher.png" class="w3-circle w3-light-gray" style="height:25px;width:25px" alt="Avatar"/> Oscar
+            </a>
+            <div id='s_profile' class=" w3-container w3-hide w3-center" >
+                <a href="#" class="w3-bar-item w3-button">Profile</a>
+                <a href="#" class="w3-bar-item w3-button">Favorit</a>
+                <a href="#" class="w3-bar-item w3-button">Settings</a>
+            </div>
+        </div>
+   
+    <div class="w3-container w3-white" style="padding:50px;padding-top:80px">
+        <div class="w3-row-padding" >
+            <div class="w3-col l6  w3-center" style="margin-top: 50px;" >
+                <h1 class="w3-jumbo w3-text-black" >Inspire the education</h1>
+                <h4 class="w3-text-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis, ligula eget finibus eleifend, ex lectus sodales nisl, a commodo dolor ex eu augue.</h4>
+                <h4 class="w3-margin-top w3-text-gray">Sign up as a...</h4>
+                <!--Login options-->
+                <div class=" w3-container w3-bar  w3-padding-16 ">
+                    <div class=" w3-bar-item w3-padding w3-mobile w3-hover-sepia" onclick="document.getElementById('signup').style.display='block'">
+                        <div class="w3-padding w3-border w3-round-xlarge  w3-card w3-light-gray">
+                            <img src="./teacher.png"  alt="Alps">
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Teacher</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-bar-item w3-padding  w3-mobile w3-hover-sepia">
+                        <div class="w3-padding w3-border w3-round-xlarge w3-card w3-light-gray">
+                            <img src="./student.png"  alt="Alps">
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Student</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-bar-item w3-padding  w3-mobile w3-hover-sepia">
+                        <div class="w3-padding w3-border w3-round-xlarge w3-card w3-light-gray">
+                            <img src="./parents.png"  alt="Alps">
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Parent</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-bar-item  w3-padding  w3-mobile w3-hover-sepia">
+                        <div class="w3-padding w3-border w3-round-xlarge w3-card w3-light-gray">
+                            <img src="./headmaster.png" alt="Alps">
+                            <div class="w3-center">
+                              <span class="w3-text-deep-purple"><strong>Manager</strong></span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="w3-col l6 w3-center  w3-center" style="padding:50px;">
+                <video id="homevideo" width="80%" height="auto" controls >
+                    <source src="./kid.mp4" type="video/mp4" >
+                  Your browser does not support the video tag.
+                </video> 
+            </div>
+            
+        </div>
+        
+    </div>
+    <!--Header END-->
+    <!--PPT games-->
+    <section class=" w3-cell-row mypanel">
+        <div class="w3-container  w3-cell-middle w3-cell w3-center w3-mobile">
+            <h1 class="w3-xxxlarge ">Play PPT Games </h1>
+            <h5 >Instantly share photos, videos, and announcements on Class Story, or privately message with any parent 😍</h5>
+            <ul >
+                <h5>Parents easily join your class using any device.</h5>
+                <h5>Instantly translate messages into 30+ languages.</h5>
+                <h5>Let families know when you're busy with Quiet Hours.</h5>
+            </ul>
+            <button class="w3-btn w3-deep-purple w3-round-xxlarge w3-padding w3-large" style="margin-top:1cm;">Learn More</button>  
+        </div>
+        <div class="w3-container w3-cell w3-cell-middle w3-padding w3-center w3-mobile">
+            <img src="./sandbox.png"  style="width: 100%;height: auto;" class="w3-circle"  alt="Alps"/>
+        </div>
+    </section>
+
+    <section class=" w3-cell-row mypanel w3-light-gray">
+        <div class="w3-container  w3-cell-middle w3-cell w3-center w3-mobile">
+            <h1 class="w3-xxxlarge ">Play PPT Games </h1>
+            <h5 >Instantly share photos, videos, and announcements on Class Story, or privately message with any parent 😍</h5>
+            <ul >
+                <h5>Parents easily join your class using any device.</h5>
+                <h5>Instantly translate messages into 30+ languages.</h5>
+                <h5>Let families know when you're busy with Quiet Hours.</h5>
+            </ul>
+            <button class="w3-btn w3-deep-purple w3-round-xxlarge w3-padding w3-large" style="margin-top:1cm;">Learn More</button>  
+        </div>
+        <div class="w3-container w3-cell w3-cell-middle w3-padding w3-center w3-mobile">
+            <img src="./sandbox.png"  style="width: 100%;height: auto;" class="w3-circle"  alt="Alps"/>
+        </div>
+    </section>
+
+    <section class=" w3-cell-row mypanel ">
+        <div class="w3-container  w3-cell-middle w3-cell w3-center w3-mobile">
+            <h1 class="w3-xxxlarge ">Play PPT Games </h1>
+            <h5 >Instantly share photos, videos, and announcements on Class Story, or privately message with any parent 😍</h5>
+            <ul >
+                <h5>Parents easily join your class using any device.</h5>
+                <h5>Instantly translate messages into 30+ languages.</h5>
+                <h5>Let families know when you're busy with Quiet Hours.</h5>
+            </ul>
+            <button class="w3-btn w3-deep-purple w3-round-xxlarge w3-padding w3-large" style="margin-top:1cm;">Learn More</button>  
+        </div>
+        <div class="w3-container w3-cell w3-cell-middle w3-padding w3-center w3-mobile">
+            <img src="./sandbox.png"  style="width: 100%;height: auto;" class="w3-circle"  alt="Alps"/>
+        </div>
+    </section>
+
+    <section class=" w3-padding-64 w3-light-gray">
+        <div class="w3-row-padding w3-content">
+            <div class="w3-third w3-center w3-padding w3-mobile ">
+                <div class="w3-round-xlarge  w3-card w3-white" style="padding:24px 24px;">
+                    <img src="./android.png" class="w3-margin-bottom" alt="Alps">
+                    <div class="w3-center w3-margin-top">
+                        <span>Works on iOS, Android, Kindle Fire, and on any computer</span>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="w3-third w3-center w3-padding w3-mobile ">
+                <div class="w3-round-xlarge w3-card w3-white" style="padding:24px 24px;">
+                    <img src="./laptop.png" class="w3-margin-bottom" alt="Alps">
+                    <div class="w3-center w3-margin-top">
+                        <span>ClassDojo will always be free for teachers</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="w3-third w3-center w3-padding w3-mobile">
+                <div class="  w3-round-xlarge  w3-card w3-white" style="padding:24px 24px;">
+                    <img src="./padlock.png" class="w3-margin-bottom" alt="Alps">
+                    <div class="w3-center w3-margin-top"> 
+                        <span>Built with privacy by design. Read how we keep the community safe!</span>
+                    </div>  
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <div class="w3-center w3-padding-64">
+        <h2>Ready to join millions of other teachers?</h2>
+        <button class="w3-btn w3-deep-purple w3-round-xlarge w3-padding-large w3-margin-top w3-large">Get started now</button>
+    </div>
+
+    <button id="help" class="w3-button w3-padding w3-round-xxlarge w3-deep-purple w3-hover-sepia">Help me</button>
+
+    <footer class="w3-ios-dark-blue w3-padding-64">
+        <div class="w3-content w3-row-padding">
+            <div href="#" class="w3-quarter">
+                <h6>Company</h6>
+                <li>About us</li>
+                <li>FQ</li>
+            </div>
+            <div href="#" class=" w3-quarter">
+                <h6>Resources</h6>
+                <li>Cources</li>
+                <li>free Games</li>
+            </div>
+            <div href="#" class=" w3-quarter">
+                <h6>Support</h6>
+                <li>Contact</li>
+                <li>Help</li>
+            </div>
+            <div href="#" class=" w3-quarter">
+                <h6>Comunity</h6>
+                <li>Facebook</li>
+                <li>Wechat</li>
+            </div>
+        </div>  
+    </footer>
+    <script>
+        // Accordion
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+                
+        // Used to toggle the menu on smaller screens when clicking on the menu button
+        function openNav() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+        </script>
+</body>
+</html>

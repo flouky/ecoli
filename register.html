@@ -1,0 +1,51 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h5>logo</h5>
+  
+
+  <div id="signup" class="w3-modal">
+    <style>
+        *{
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-decoration: none;
+        }
+          input:focus, textarea:focus, select:focus{
+            outline: none;
+        }
+        .myinput {
+            border: 2px solid rgb(196, 194, 194); 
+            padding-left: 20px;
+            }
+    </style>
+    <div class="w3-modal-content" style="max-width:600px">
+
+      <div class="w3-center"><br>
+        
+        <img src="./teacher.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+      </div>
+
+      <form class="w3-container" action="/action_page.php">
+        <div class="w3-section">
+        
+          <input class="myinput w3-input w3-margin-bottom w3-padding-16 w3-round-xxlarge" type="text" placeholder="First name" name="usrname">
+          <input class="myinput w3-input w3-margin-bottom w3-padding-16 w3-round-xxlarge" type="password" placeholder="Last name" name="psw" >
+          <input class="myinput w3-input w3-margin-bottom w3-padding-16 w3-round-xxlarge " type="password" placeholder="Email" name="psw" >
+          <input class="myinput w3-input w3-margin-bottom w3-padding-16 w3-round-xxlarge" type="password" placeholder="Password" name="psw">
+          <p class="w3-center">By signing up, you agree to ClassDojo's Terms of Service and Privacy Policy</p>
+          <button class="w3-hover-opacity w3-hover-deep-purple w3-deep-purple w3-button w3-block w3-green w3-section w3-padding-16 w3-round-xxlarge" type="submit">Sign up</button>
+        </div>
+      </form>
+
+      
+
+    </div>
+  </div>
+</div>
+            
+</body>
+</html>
